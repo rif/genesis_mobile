@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+npm-debug.log
+yarn-error.log
+www/js/build.js
+www/js/build.js.map
+www/js/logo.png
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
