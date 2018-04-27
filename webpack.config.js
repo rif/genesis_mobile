@@ -66,6 +66,20 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /((node_modules\/(?!dom7|swiper))|bower_components)/,
+        loader: 'babel-loader'
+      },
+
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'fonts/[name].[hash:7].[ext]'
+        }
       }
     ]
   },
