@@ -1,69 +1,73 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# Framework7 Vue + Webpack App Template
 
-A PhoneGap Hello World template
+A full-featured Framework7 Vue with Webpack setup with hot-reload & css extraction. Based on [Vue Webpack Boilerplate](https://github.com/vuejs-templates/webpack)
 
 ## Usage
 
-#### PhoneGap CLI
+### 1. Download this repository
+```
+git clone https://github.com/framework7io/framework7-template-vue-webpack my-app
+```
 
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
+Repository will be downloaded into `my-app/` folder
 
-    phonegap create my-app
+### 2. Instal dependencies
 
-Create an app using this template specifically:
+Go to the downloaded repository folder and run:
+```
+npm install
+```
 
-    phonegap create my-app --template hello-world
+This will download latest version of Framework7, Framework7-Vue, Vue and required icon fonts (to `/src/fonts/`)
 
-To see a list of other available PhoneGap templates:
+### 3. Run the app
 
-    phonegap template list
+```
+npm run dev
+```
 
-## [config.xml][config-xml]
+App will be opened in browser at `http://localhost:8080/`
 
-#### android-minSdkVersion (Android only)
+### 4. Build app for production
 
-Minimum SDK version supported on the target device. Maximum version is blank by default.
+```
+npm run build
+```
 
-This template sets the minimum to `14`.
+The output will be at `www/` folder
 
-    <preference name="android-minSdkVersion" value="14" />
+## Use with cordova
 
-#### &lt;access ...&gt; (All)
+Just put the contents of `www` folder in your cordova's project root `www` folder
 
-This template defaults to wide open access.
+## One command install
 
-    <access origin="*" />
+```
+git clone https://github.com/framework7io/framework7-template-vue-webpack my-app &&
+cd my-app &&
+npm install &&
+npm run dev
+```
 
-It is strongly encouraged that you restrict access to external resources in your application before releasing to production.
+## Build Setup
 
-For more information on whitelist configuration, see the [Cordova Whitelist Guide][cordova-whitelist-guide] and the [Cordova Whitelist Plugin documentation][cordova-plugin-whitelist]
+``` bash
+# install dependencies
+npm install
 
-## [www/index.html][index-html]
+# serve with hot reload at localhost:8080
+npm run dev
 
-#### Content Security Policy (CSP)
+# build for production with minification
+npm run build
+```
 
-The default CSP is similarly open:
+## Project Structure
 
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-
-Much like the access tag above, you are strongly encouraged to use a more restrictive CSP in production.
-
-A good starting point declaration might be:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-
-For more information on the Content Security Policy, see the [section on CSP in the Cordova Whitelist Plugin documentation][cordova-plugin-whitelist-csp].
-
-Another good resource for generating a good CSP declaration is [CSP is Awesome][csp-is-awesome]
-
-
-[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world/badges/score.svg
-[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world
-[config-xml]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/config.xml
-[index-html]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/www/index.html
-[cordova-whitelist-guide]: https://cordova.apache.org/docs/en/dev/guide/appdev/whitelist/index.html
-[cordova-plugin-whitelist]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist
-[cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
-[csp-is-awesome]: http://cspisawesome.com
+* `src/assets` - folder with static assets (images)
+* `src/components` - folder with custom `.vue` components
+* `src/css` - put custom app CSS styles here. Don't forget to import them in `main.js`
+* `src/pages` - app `.vue` pages
+* `src/main.js` - main app file where you include/import all required libs and init app
+* `src/routes.js` - app routes
+* `src/app.vue` - main app structure/component

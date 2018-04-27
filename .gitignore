@@ -2,11 +2,10 @@
 node_modules/
 npm-debug.log
 yarn-error.log
-www/js/build.js
-www/js/build.js.map
-www/js/logo.png
+www/
 platforms/
 plugins/
+src/fonts
 
 # Editor directories and files
 .idea
